@@ -5,7 +5,6 @@
 // create Server.js
 
 
-
 // server instantiated
 
 const express=require('express')
@@ -43,9 +42,6 @@ app.post('/api/cars',(req,res)=>{
 
 
 const mongoose=require('mongoose')
-mongoose.connect('mongodb://localhost:27017/myDatabase',{
-      useNewurlParser:true,
-      useUnifiedTopology:true
-})
-.then(()=>{console.log("Connection Successfully")})
-.catch((error) =>{console.log("Recieved on error")} )
+mongoose.connect('mongodb://localhost:27017/myDatabase')
+.then(()=>{console.log("Connection Successful")})
+.catch((error) =>{console.log("Received an error:", error.message)})
