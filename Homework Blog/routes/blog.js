@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { createPost, getPosts, getPostById } = require("../controllers/post");
 const { createComment } = require("../controllers/comment");
-const { likePost } = require("../controllers/likes");
+const { likePost, unlikePost } = require("../controllers/likes");
 
 // POST ROUTES
 router.post("/createPost", createPost);
@@ -19,5 +19,6 @@ router.post("/comment", createComment);
 
 // LIKE
 router.post("/like", likePost);
+router.post("/unlike", unlikePost);
 
 module.exports = router;

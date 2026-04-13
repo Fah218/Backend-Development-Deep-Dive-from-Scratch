@@ -3,20 +3,26 @@ const { Post, Comment } = require("../models/schema");
 // ADD COMMENT
 exports.createComment = async (req, res) => {
     try {
-        const { postId, body } = req.body;
+        const { post, postId, user, body } = req.body;
+        // Accept either post or postId from request body
+        const targetPost = post || postId;
 
         const comment = await Comment.create({
-            post: postId,
+            post: targetPost,
+            user,
             body
         });
 
-        await Post.findByIdAndUpdate(postId, {
+        // Add the new comment ID to the Post's comments array
+        const updatedPost = await Post.findByIdAndUpdate(targetPost, {
             $push: { comments: comment._id }
-        });
+        }, { new: true })
+            .populate("comments") // Populate with actual comment documents
+            .exec();
 
         res.status(200).json({
             success: true,
-            comment
+            post: updatedPost
         });
 
     } catch (error) {
