@@ -2,15 +2,15 @@
   "pet": {
     "name": "Buddy",
     "hp": 49,
-    "xp": 20,
+    "xp": 85,
     "level": 1,
     "mood": "SAD",
     "daysTogther": 0,
-    "feedCount": 1,
+    "feedCount": 3,
     "playCount": 0,
-    "scanCount": 2,
+    "scanCount": 6,
     "createdAt": "2026-04-22T05:38:13.500Z",
-    "lastActive": "2026-04-22T05:38:23.180Z"
+    "lastActive": "2026-04-22T08:50:12.291Z"
   },
   "git": {
     "commitsByDay": {
@@ -32,5 +32,7 @@
     "totalSessions": 0,
     "totalMinutes": 0
   },
-  "achievements": []
+  "achievements": [
+    "first_feed"
+  ]
 }

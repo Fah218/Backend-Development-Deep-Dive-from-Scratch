@@ -1,10 +1,13 @@
 const express = require("express");   // FIXED
 const router = express.Router();
 
-const { imageUpload, videoUpload, imageReducerUpload, localFileUpload } = require("../controllers/fileUpload");
+const { imageUpload, videoUpload, imageSizeReducer, localFileUpload } = require("../controllers/fileUpload");
 
 // api route
 router.post("/localFileUpload", localFileUpload);
 router.post("/imageUpload", imageUpload);
+router.post("/videoUpload", videoUpload);
+router.post("/imageSizeReducer", imageSizeReducer);
+
 
 module.exports = router;
