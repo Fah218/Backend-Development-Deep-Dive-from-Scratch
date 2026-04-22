@@ -1,0 +1,36 @@
+{
+  "pet": {
+    "name": "Buddy",
+    "hp": 49,
+    "xp": 20,
+    "level": 1,
+    "mood": "SAD",
+    "daysTogther": 0,
+    "feedCount": 1,
+    "playCount": 0,
+    "scanCount": 2,
+    "createdAt": "2026-04-22T05:38:13.500Z",
+    "lastActive": "2026-04-22T05:38:23.180Z"
+  },
+  "git": {
+    "commitsByDay": {
+      "2026-04-21": 1,
+      "2026-04-18": 1,
+      "2026-04-16": 1,
+      "2026-04-14": 1,
+      "2026-04-01": 1,
+      "2026-03-31": 1,
+      "2026-03-28": 1,
+      "2026-03-26": 1
+    },
+    "streak": 1,
+    "totalCommits": 8,
+    "lastCommit": "2026-04-21",
+    "health": 49
+  },
+  "focus": {
+    "totalSessions": 0,
+    "totalMinutes": 0
+  },
+  "achievements": []
+}
